@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test position</title>
+    <style type="text/css">
+      .box {
+        width: 800px;
+        height: 800px;
+        border: solid 1px rgb(138, 138, 138);
+        margin: 20px 400px;
+        position: relative;
+      }
+      .a {
+        position: absolute;
+        border: solid 1px red;
+        background-color: red;
+        width: 600px;
+        height: 600px;
+        left: 60px;
+        top: 40px;
+        pointer-events: auto;
+        color: aqua;
+        font-size: 36px;
+        font-family:"微软雅黑";
+        font-weight: bold;
+        z-index: 6
+      }
+
+      .b {
+        position: absolute;
+        border: solid 1px green;
+        background-color: green;
+        width: 600px;
+        height: 600px;
+        left: 120px;
+        top: 80px;
+        pointer-events: none;
+color: rgb(98, 0, 255);
+font-size: 36px;
+font-family:"微软雅黑";
+font-weight: bold;
+z-index: 99
+      }
+/* 
+      .a1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: red;
+        left: 250px;
+        top: 50px;
+        pointer-events: auto;
+      }
+
+      .b1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: green;
+        left: 50px;
+        top: 250px;
+        pointer-events: auto;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+<div class="a" onclick="onclicka()">a视图层</div>
+<div class="b" onclick="onclickb()">b视图层</div>
+    </div>
+    <script type="text/javascript">
+      function onclicka() {
+console.log("click a a视图层事件触发");
+alert("a视图层事件触发")
+      }
+
+      function onclickb() {
+console.log("click a视图层事件触发");
+alert("b视图层事件触发")
+      }
+    </script>
+  </body>
+</html>
